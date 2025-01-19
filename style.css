@@ -9,19 +9,19 @@ body {
     color: #333;
     overflow: hidden;
     background: linear-gradient(135deg, #f8c8d3, #f1a7c7, #f2d2db, #fce4e1);
-    background-size: 300% 300%; /* Smooth gradient transition */
-    animation: moveGradient 10s ease infinite; /* Animate the gradient */
+    background-size: 300% 300%; 
+    animation: moveGradient 10s ease infinite; 
 }
 .normal-font {
     font-family: Arial, sans-serif;
-    color: #333; /* Adjust color if needed */
+    color: #333; 
 }
 
 .different-font {
-    font-family: 'Baloo 2', cursive; /* Fun and playful font */
-    color: #e63946; /* Match the theme or choose your preferred color */
-    font-weight: 600; /* Bold for emphasis */
-    font-size: 1.5em; /* Slightly larger for emphasis */
+    font-family: 'Baloo 2', cursive; 
+    color: #e63946; 
+    font-weight: 600; 
+    font-size: 1.5em; 
 }
 
 /* Container */
@@ -29,12 +29,12 @@ body {
     text-align: center;
     position: relative;
     background: url('image/cecilion.jpg') no-repeat center center;
-    background-size: cover; /* Ensure the image covers the entire container */
+    background-size: cover; 
     padding: 20px 40px;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     max-width: 90%;
-    color: #fff; /* White text color for contrast */
+    color: #fff; 
 }
 
 /* Add a dark overlay on the image to tone it down */
@@ -59,7 +59,7 @@ body {
 
 h1, p {
     color: #fff; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Black outline effect */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
 }
 
 
@@ -75,30 +75,30 @@ h1, p {
     }
 }
 button {
-    background: linear-gradient(145deg, #f7a7d5, #f77f00); /* Soft pink gradient */
+    background: linear-gradient(145deg, #f7a7d5, #f77f00); 
     color: white;
     border: none;
     padding: 12px 24px;
     font-size: 1.1em;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 25px; /* Rounded corners for a softer look */
+    border-radius: 25px; 
     transition: all 0.3s ease;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.3); /* 3D button effect */
-    font-family: 'Pacifico', cursive; /* New playful font for the button text */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Black stroke effect on the text */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.3); 
+    font-family: 'Pacifico', cursive; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
 }
 
 button:hover {
-    background: linear-gradient(145deg, #f77f00, #f7a7d5); /* Reverse gradient on hover */
-    transform: translateY(-4px); /* Lift effect on hover */
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3), -4px -4px 12px rgba(255, 255, 255, 0.4); /* Enhanced shadow on hover */
+    background: linear-gradient(145deg, #f77f00, #f7a7d5); 
+    transform: translateY(-4px); 
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3), -4px -4px 12px rgba(255, 255, 255, 0.4); 
 }
 
 button:active {
-    background: linear-gradient(145deg, #f7a7d5, #f77f00); /* Keep the same gradient */
-    transform: translateY(2px); /* Button slightly pushed down when clicked */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.2); /* Subtle shadow for active state */
+    background: linear-gradient(145deg, #f7a7d5, #f77f00);
+    transform: translateY(2px); 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.2); 
 }
 
 /* Cake Animation */
@@ -144,15 +144,15 @@ button:active {
 /* Candle */
 .candle {
     position: absolute;
-    top: 10px; /* Adjusted to sit above the top layer */
+    top: 10px; 
     left: 50%;
-    width: 10px; /* Keep the width smaller for a realistic appearance */
-    height: 30px; /* Shorter height to keep it more proportional */
-    background: linear-gradient(to top, #ffffff, #f2f2f2); /* White to light grey gradient for a realistic candle look */
+    width: 10px; 
+    height: 30px; 
+    background: linear-gradient(to top, #ffffff, #f2f2f2); 
     border-radius: 5px;
     transform: translateX(-50%);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow around the candle */
-    border: 1px solid #e2e2e2; /* Light border to enhance the candle look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #e2e2e2; 
 }
 
 /* Flame */
@@ -162,7 +162,7 @@ button:active {
     left: 50%;
     width: 15px;
     height: 30px;
-    background: radial-gradient(circle, #ff9a00, #ff4500); /* Flame gradient */
+    background: radial-gradient(circle, #ff9a00, #ff4500); 
     border-radius: 50%;
     transform: translateX(-50%);
     animation: flicker 1s infinite alternate, flameMovement 2s infinite;
@@ -265,16 +265,16 @@ button:active {
         height: 20px;
     }
     .layer-bottom {
-        bottom: 10px; /* Bring the bottom layer up */
+        bottom: 10px; 
     }
     .layer-middle {
-        bottom: 30px; /* Bring the middle layer closer */
+        bottom: 30px; 
     }
     .layer-top {
-        bottom: 50px; /* Bring the top layer closer */
+        bottom: 50px; 
     }
     .candle {
-        height: 40px; /* Reduce the height of the candle */
+        height: 40px; 
     }
 }
 
@@ -319,7 +319,7 @@ button:active {
     background-size: contain; 
     background-position: center center; 
     background-repeat: no-repeat; 
-    color: #e63946; 
+    color: skyblue;
     padding: 40px;
     border-radius: 15px;
     text-align: center;
@@ -328,6 +328,11 @@ button:active {
     position: relative;
     z-index: 2; 
     box-sizing: border-box;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+.modal-content p {
+    color: skyblue; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
 }
 
 .close {
@@ -369,7 +374,7 @@ button:active {
     }
 }
 
-/* Firework particles */
+
 .firework {
     position: absolute;
     top: 50%;
@@ -379,14 +384,14 @@ button:active {
     background-color: #ff6347;
     border-radius: 50%;
     animation: firework 1s ease-out forwards;
-    pointer-events: none; /* Prevent particles from interfering with clicks */
+    pointer-events: none; 
 }
 
 .firework:nth-child(odd) {
     background-color: #ff9a00;
 }
 
-/* Optional: More particles variation */
+
 .firework:nth-child(3n) {
     background-color: #00ff99;
 }
