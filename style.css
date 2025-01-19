@@ -407,3 +407,10 @@ body.modal-open {
 .firework:nth-child(7n) {
     background-color: #32cd32;
 }
+
+/* Prevent scrolling on the main page for mobile devices */
+@media (max-width: 768px) {
+    body {
+        overflow: hidden; /* Disables scrolling */
+    }
+}
