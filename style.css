@@ -1,0 +1,246 @@
+/* Base Styles */
+body {
+    font-family: 'Fredoka One', 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8c8d3, #f1a7c7, #f2d2db, #fce4e1);
+    background-size: 300% 300%; /* Smooth gradient transition */
+    animation: moveGradient 10s ease infinite; /* Animate the gradient */
+}
+.normal-font {
+    font-family: Arial, sans-serif;
+    color: #333; /* Adjust color if needed */
+}
+
+.different-font {
+    font-family: 'Baloo 2', cursive; /* Fun and playful font */
+    color: #e63946; /* Match the theme or choose your preferred color */
+    font-weight: 600; /* Bold for emphasis */
+    font-size: 1.5em; /* Slightly larger for emphasis */
+}
+
+/* Container */
+.container {
+    text-align: center;
+    position: relative;
+    background: url('image/cecilion.jpg') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the entire container */
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    color: #fff; /* White text color for contrast */
+}
+
+/* Add a dark overlay on the image to tone it down */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    border-radius: 15px;
+    z-index: 1; 
+}
+
+
+.container > * {
+    position: relative;
+    z-index: 2; 
+}
+
+
+h1, p {
+    color: #fff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Black outline effect */
+}
+
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+button {
+    background: linear-gradient(145deg, #f7a7d5, #f77f00); /* Soft pink gradient */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px; /* Rounded corners for a softer look */
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.3); /* 3D button effect */
+    font-family: 'Pacifico', cursive; /* New playful font for the button text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Black stroke effect on the text */
+}
+
+button:hover {
+    background: linear-gradient(145deg, #f77f00, #f7a7d5); /* Reverse gradient on hover */
+    transform: translateY(-4px); /* Lift effect on hover */
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3), -4px -4px 12px rgba(255, 255, 255, 0.4); /* Enhanced shadow on hover */
+}
+
+button:active {
+    background: linear-gradient(145deg, #f7a7d5, #f77f00); /* Keep the same gradient */
+    transform: translateY(2px); /* Button slightly pushed down when clicked */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), -2px -2px 5px rgba(255, 255, 255, 0.2); /* Subtle shadow for active state */
+}
+
+/* Cake Animation */
+.cake {
+    position: relative;
+    margin: 20px auto;
+    width: 120px;
+    height: 150px;
+}
+
+.plate {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background: #f6d365;
+    border-radius: 50%;
+}
+
+.layer {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.layer-bottom {
+    background: #6a0572;
+    bottom: 20px;
+}
+
+.layer-middle {
+    background: #ff9a9e;
+    bottom: 50px;
+}
+
+.layer-top {
+    background: #f6d365;
+    bottom: 80px;
+}
+
+/* Candle */
+.candle {
+    position: absolute;
+    top: 10px; /* Adjusted to sit above the top layer */
+    left: 50%;
+    width: 10px; /* Keep the width smaller for a realistic appearance */
+    height: 30px; /* Shorter height to keep it more proportional */
+    background: linear-gradient(to top, #ffffff, #f2f2f2); /* White to light grey gradient for a realistic candle look */
+    border-radius: 5px;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow around the candle */
+    border: 1px solid #e2e2e2; /* Light border to enhance the candle look */
+}
+
+/* Flame */
+.flame {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    width: 15px;
+    height: 30px;
+    background: radial-gradient(circle, #ff9a00, #ff4500); /* Flame gradient */
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: flicker 1s infinite alternate, flameMovement 2s infinite;
+}
+
+/* Flame Flicker */
+@keyframes flicker {
+    0% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+    20% {
+        transform: translateX(-50%) scale(1.1);
+        opacity: 0.9;
+    }
+    40% {
+        transform: translateX(-50%) scale(1.2);
+        opacity: 0.8;
+    }
+    60% {
+        transform: translateX(-50%) scale(1.15);
+        opacity: 0.9;
+    }
+    80% {
+        transform: translateX(-50%) scale(1.1);
+        opacity: 0.85;
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Flame Movement */
+@keyframes flameMovement {
+    0% {
+        top: -15px;
+    }
+    50% {
+        top: -20px;
+    }
+    100% {
+        top: -15px;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    p {
+        font-size: 1em;
+    }
+    button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+    .cake {
+        width: 100px;
+        height: 120px;
+    }
+    .layer {
+        height: 20px;
+    }
+    .candle {
+        height: 40px;
+    }
+}
+
+/* Flame Animation */
+@keyframes flicker {
+    0% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) scale(1.2);
+        opacity: 0.8;
+    }
+}
