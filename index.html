@@ -36,14 +36,14 @@
 
     <script>
         function openModal() {
-            document.body.style.overflow = 'hidden'; // Disable body scrolling
+            document.body.classList.add('modal-open'); // Add class to prevent body scrolling
             const modal = document.getElementById("myModal");
             modal.style.display = "flex";
             triggerFireworks();
         }
 
         function closeModal() {
-            document.body.style.overflow = 'auto'; // Enable body scrolling again
+            document.body.classList.remove('modal-open');
             const modal = document.getElementById("myModal");
             modal.style.display = "none";
         }
