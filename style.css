@@ -297,3 +297,102 @@ button:active {
         bottom: 80px;
     }
 }
+
+
+#myModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal-content {
+
+    background-size: contain; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    color: #e63946; 
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 80%; 
+    max-width: 400px; 
+    position: relative;
+    z-index: 2; 
+}
+
+.close {
+    color: #fff; 
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2; 
+}
+
+.close:hover,
+.close:focus {
+    color: #ff6347;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#myModal .modal-content {
+    filter: none;
+}
+
+/* Firework Animation */
+@keyframes firework {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Firework particles */
+.firework {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #ff6347;
+    border-radius: 50%;
+    animation: firework 1s ease-out forwards;
+    pointer-events: none; /* Prevent particles from interfering with clicks */
+}
+
+.firework:nth-child(odd) {
+    background-color: #ff9a00;
+}
+
+/* Optional: More particles variation */
+.firework:nth-child(3n) {
+    background-color: #00ff99;
+}
+
+.firework:nth-child(5n) {
+    background-color: #ff4500;
+}
+
+.firework:nth-child(7n) {
+    background-color: #32cd32;
+}

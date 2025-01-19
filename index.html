@@ -22,7 +22,59 @@
                 <div class="flame"></div>
             </div>
         </div>
-        <button onclick="alert('May you have the best year ahead! Byeee 🎁')">Tekan sini</button>
+        
+        <button onclick="showModal()">Tekan sini</button>
+
+      
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p>May you have the best year ahead! Byeee 🎁</p>
+            </div>
+        </div>
     </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "flex"; // Change to "flex" to center the modal
+            triggerFireworks();
+        }
+    
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    
+        window.onclick = function(event) {
+            if (event.target === document.getElementById("myModal")) {
+                closeModal();
+            }
+        }
+    
+        document.querySelector("button").addEventListener("click", openModal);
+    
+        function triggerFireworks() {
+            // Create multiple firework particles
+            for (let i = 0; i < 50; i++) {
+                let firework = document.createElement('div');
+                firework.classList.add('firework');
+                document.body.appendChild(firework);
+    
+                // Position each particle randomly
+                let angle = Math.random() * 360;
+                let distance = Math.random() * 150 + 50;
+                let x = Math.cos(angle) * distance + window.innerWidth / 2;
+                let y = Math.sin(angle) * distance + window.innerHeight / 2;
+    
+                firework.style.left = `${x}px`;
+                firework.style.top = `${y}px`;
+    
+                // Remove the particle after animation ends
+                firework.addEventListener('animationend', () => {
+                    firework.remove();
+                });
+            }
+        }
+    </script>
+    
 </body>
 </html>
