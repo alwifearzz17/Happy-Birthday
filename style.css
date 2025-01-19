@@ -337,6 +337,8 @@ button:active {
 /* Prevent scrolling when modal is open */
 body.modal-open {
     overflow: hidden;
+    position: fixed;
+    width: 100%;
 }
 
 .close {
@@ -411,6 +413,6 @@ body.modal-open {
 /* Prevent scrolling on the main page for mobile devices */
 @media (max-width: 768px) {
     body {
-        overflow: hidden; /* Disables scrolling */
+        overflow: hidden; 
     }
 }
